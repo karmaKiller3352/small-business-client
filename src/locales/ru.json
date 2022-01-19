@@ -1,0 +1,129 @@
+{
+  "common": {
+    "yes": "Да",
+    "no": "Нет",
+    "ok": "ОК",
+    "cancel": "Отмена",
+    "submit": "Отправить",
+    "save": "Сохранить",
+    "enter_text": "Введите текст",
+    "enter_name": "Введите название"
+  },
+  "buttons": {
+    "set_dark": "Установить темную",
+    "set_light": "Установить светлую",
+    "ru": "Русский",
+    "en": "Английский"
+  },
+  "Sign In": "Войти",
+  "Please Sign In / Sign Up": "Войти / Зарегистрироваться",
+  "Sign Up": "Зарегистрироваться",
+  "Sign in to your account": "Войти в ваш аккаунт",
+  "Username": "Логин",
+  "Password": "Пароль",
+  "Enter your username": "Введите вашу электронную почту",
+  "Enter your password": "Введите ваш пароль",
+  "Enter your confirmation code": "Введите код подтверждения",
+  "Confirmation Code": "Код подтверждения",
+  "Back to Sign In": "Войти",
+  "Forgot Password": "Забыли пароль",
+  "Email": "Электронная почта",
+  "Phone Number": "Номер телефона",
+  "Create a new account": "Создать новый аккаунт",
+  "Confirm a Code": "Подтвердить код отправленный на почту",
+  "Confirm Sign Up": "Подтвердить регистрацию",
+  "Confirm": "Подтвердить",
+  "User does not exist": "Пользователя с таким логином не существует",
+  "form": {
+    "firstName": "Введите имя",
+    "lastName": "Введите фамилию",
+    "contact_phone": "Контактный номер телефона",
+    "account_number": "Номер для рассылки прайса",
+    "mail_messenger": "Мессенджер для рассылки",
+    "additional_info": "Дополнительная информация",
+    "delivery_info": "Адрес доставки",
+    "preferred_messenger": "Мессенджер: "
+  },
+  "modal": {
+    "defaultMessage": "Вы уверены?",
+    "removeTitle": "Вы уверены что хотите удалить?"
+  },
+  "errors": {
+    "required": "Обязательно к заполнению",
+    "textarea_too_long": "Максимум 200 знаков",
+    "too_short": "Минимум {{count}} знак(ов)(а)",
+    "pricelist_dublicate": "Существует прайслист с таким именем",
+    "product_dublicate": "Существует товар с таким именем",
+    "validations": {
+      "is_required": "{{field}} заполнить обязательно",
+      "at_least": "{{field}} должно быть минимум {{count}} символов",
+      "no_longer": "{{field}} должно быть не больше {{count}} символов",
+      "more_than": "Поле {{field1}} должно быть больше чем поле {{field2}}",
+      "less_than": "{{field1}} должно быть меньше чем поле {{field2}}"
+    }
+  },
+  "field_names": {
+    "title": "Заголовок",
+    "count": "Количество",
+    "sell_price": "Цена продажи",
+    "purchase_price": "Цена покупки"
+  },
+  "menu": {
+    "bottom": {
+      "home": "Главная",
+      "pricelist": "Прайс-лист",
+      "clients": "Клиенты",
+      "orders": "Заказы",
+      "messages": "Сообщения"
+    },
+    "drawer": {
+      "profile": "Профиль",
+      "reports": "Отчеты",
+      "settings": "Настройки",
+      "payment": "Оплата",
+      "logout": "Выйти"
+    },
+    "pricelist": {
+      "list": "Прайслисты",
+      "product": "Продукт",
+      "details": "Прайслист"
+    }
+  },
+  "screen": {
+    "settings": {
+      "language_label": "Выберите язык",
+      "theme_label": "Выберите тему",
+      "dark_mode": "Темный режим"
+    },
+    "main": {
+      "menu": {
+        "home": "Главная",
+        "page": "Заголовок"
+      },
+      "date": "Текущая дата",
+      "pricelist": "Прайслист на сегодня",
+      "count": "Всего позиций",
+      "purchase_cost": "Стоимость закупки",
+      "sale_value": "Ожидаемая выручка"
+    },
+    "client": {
+      "menu": {
+        "list": "Список клиентов",
+        "add_new": "Добавить клиента",
+        "edit": "Редактировать",
+        "details": "Профиль клиента"
+      }
+    },
+    "pricelist": {
+      "add_product": "Добавить товар",
+      "save_pricelist": "Сохранить прайс",
+      "goods": "Товар",
+      "fields": {
+        "product_count": "Количество позиций",
+        "order_count": "Количество заказов",
+        "purchase_price": "Цена покупки",
+        "sell_price": "Цена продажи"
+      }
+    }
+  }
+}

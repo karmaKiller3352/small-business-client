@@ -1,0 +1,23 @@
+type Products @model @key(name: "byPricelist", fields: ["pricelistID"]) @auth(rules: [{allow: owner, ownerField: "owner"}]) {
+  id: ID!
+  title: String!
+  image: String
+  sellPrice: Float
+  count: Float
+  uom: String
+  pricelistID: ID!
+  purchasePrice: Float
+  owner: String!
+  createdDay: String
+}
+
+type Pricelist @model @auth(rules: [{allow: owner, ownerField: "owner"}]) {
+  id: ID!
+  image: String
+  title: String!
+  ordersCount: Int
+  Products: [Products!] @connection(keyName: "byPricelist", fields: ["id"])
+  owner: String!
+  createdDay: String
+}
+ 

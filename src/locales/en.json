@@ -1,0 +1,110 @@
+{
+  "common": {
+    "yes": "yes",
+    "no": "no",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "save": "Save",
+    "enter_text": "Enter some text",
+    "enter_name": "Enter pricelist name"
+  },
+  "buttons": {
+    "set_dark": "Set Dark",
+    "set_light": "Set Light",
+    "ru": "Russian",
+    "en": "English"
+  },
+  "form": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "contact_phone": "Your contact number:",
+    "account_number": "Number for mailing",
+    "mail_messenger": "Messenger for mailing",
+    "additional_info": "Additional info",
+    "delivery_info": "Delivery info",
+    "preferred_messenger": "Preferred messenger: "
+  },
+  "modal": {
+    "defaultMessage": "Are you sure?",
+    "removeTitle": "Are you sure you want to delete?"
+  },
+  "errors": {
+    "required": "Field is required",
+    "textarea_too_long": "Must be at most 200 characters",
+    "too_short": "Field must be at least {{count}} characters long",
+    "pricelist_dublicate": "Pricelist with the same name exists",
+    "product_dublicate": "Product with the same name exists",
+    "validations": {
+      "is_required": "{{field}} is required",
+      "at_least": "{{field}} should be at least {{count}} chars",
+      "no_longer": "{{field}} should be no longer than {{count}} chars",
+      "more_than": "{{field1}} should be more then {{field2}}",
+      "less_than": "{{field1}} price should be lesser then {{field2}}"
+    }
+  },
+  "field_names": {
+    "title": "Title",
+    "count": "Count",
+    "sell_price": "Sell price",
+    "purchase_price": "Purchase price"
+  },
+  "menu": {
+    "bottom": {
+      "home": "Home",
+      "pricelist": "Pricelist",
+      "clients": "Clients",
+      "orders": "Orders",
+      "messages": "Messages"
+    },
+    "drawer": {
+      "profile": "Profile",
+      "reports": "Reports",
+      "settings": "Settings",
+      "payment": "Payement",
+      "logout": "Logout"
+    },
+    "pricelist": {
+      "list": "Pricelists",
+      "product": "Product",
+      "details": "Pricelist"
+    }
+  },
+  "screen": {
+    "settings": {
+      "language_label": "Choose language",
+      "theme_label": "Choose theme",
+      "dark_mode": "Dark mode"
+    },
+    "main": {
+      "menu": {
+        "home": "Home",
+        "page": "Title"
+      },
+      "date": "Current date",
+      "pricelist": "Price list for today",
+      "count": "Items count",
+      "purchase_cost": "Purchase cost",
+      "sale_value": "Sale value"
+    },
+    "client": {
+      "menu": {
+        "list": "List of clients",
+        "edit": "Edit Client",
+        "add_new": "Add Client",
+        "details": "Client profile"
+      }
+    },
+    "pricelist": {
+      "add_product": "Add product",
+      "save_pricelist": "Save pricelist",
+      "goods": "Goods",
+      "fields": {
+        "product_count": "Count of products",
+        "order_count": "Count of orders",
+        "purchase_price": "Purchase price {{currency}}",
+        "sell_price": "Sell price"
+      }
+    }
+  }
+}
