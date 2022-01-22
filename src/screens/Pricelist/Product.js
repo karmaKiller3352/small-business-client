@@ -3,8 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { Button, Text } from 'react-native';
 import { ScreenWrapper } from 'styles/global';
 import AddNameLayout from './components/AddNameLayout';
-import { useSyncActions } from 'hooks/datastore';
-import { Products } from 'models';
 import * as R from 'ramda';
 import { useRightButtons } from 'navigation/helpers';
 import { useAppForm } from 'hooks/common';
@@ -28,8 +26,7 @@ const ProductScreen = ({ navigation, route }) => {
     ...details,
   };
 
-  const { syncAction } = useSyncActions();
-  const onSubmit = async data => await syncAction(data, Products);
+  const onSubmit = data => null
 
   const {
     isDirty,

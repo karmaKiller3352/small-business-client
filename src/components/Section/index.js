@@ -6,10 +6,11 @@ import { useThemedStyles } from 'hooks/common';
 const getStyles = (theme, props) =>
   StyleSheet.create({
     container: {
+      flexWrap: props.wrap ? 'wrap' : 'nowrap',
       flexDirection: props.direction,
       alignItems: props.alignItems,
       justifyContent: props.justifyContent,
-      width: props.width,
+      width: props.width || '100%',
       paddingTop: props.top,
       paddingBottom: props.bottom,
       paddingRight: props.right,
@@ -29,6 +30,7 @@ const Section = ({
   direction,
   height,
   children,
+  wrap,
   style,
 }) => {
   const { Styles } = useThemedStyles(getStyles, {
@@ -40,6 +42,7 @@ const Section = ({
     height,
     right,
     width,
+    wrap,
     direction,
   });
 

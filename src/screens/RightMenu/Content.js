@@ -5,13 +5,12 @@ import * as R from 'ramda';
 import { SafeAreaView, StyleSheet, View, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
 import { useNavigation, DrawerActions } from '@react-navigation/native';
-import { DataStore } from '@aws-amplify/datastore';
 import Avatar from 'components/Avatar';
 import Caption from 'components/Caption';
 import Section from 'components/Section';
 import { useThemedStyles } from 'hooks/common';
-import { Auth } from 'aws-amplify';
 import { APP_DRAWLER_ROUTES } from 'navigation/helpers';
+import { useAuthContext } from 'providers/AuthProvider';
 
 const getStyles = theme =>
   StyleSheet.create({
@@ -76,10 +75,7 @@ const Content = () => {
 
   const { i18n } = useTranslation();
 
-  const signOutHandler = useCallback(async () => {
-    await DataStore.clear();
-    Auth.signOut();
-  }, []);
+  const { signOut } = useAuthContext();
 
   const menuRouterMap = useMemo(
     () => [
@@ -140,7 +136,7 @@ const Content = () => {
         </Section>
         <View style={Styles.icon}>
           <Icon
-            onPress={signOutHandler}
+            onPress={signOut}
             name="log-out"
             type="entypo"
             color="#fff"

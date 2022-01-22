@@ -35,6 +35,12 @@ export const PRICE_STACK_ROUTES = {
   PRODUCT: 'Product',
 };
 
+export const AUTH_STACK_ROUTES = {
+  SIGN_IN: 'Signin',
+  SIGN_UP: 'Signup',
+  PASSWORD_RESTORE: 'Restore password',
+};
+
 const tabIconMap = {
   [BOTTOM_TAB_ROUTES.HOME]: {
     type: 'ionicon',

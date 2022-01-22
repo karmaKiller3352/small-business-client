@@ -31,13 +31,13 @@ export const ScrollContainer = ({ children, indent }) => {
   return <ScrollView style={Styles.container}>{children}</ScrollView>;
 };
 
-export const ScreenWrapper = ({ children }) => {
+export const ScreenWrapper = ({ children, style }) => {
   const { Styles } = useThemedStyles(getStyles);
 
   return (
     <SafeAreaView>
       <StatusBar translucent backgroundColor="rgba(0,0,0,0.3)" />
-      <View style={Styles.wrapper}>{children}</View>
+      <View style={[Styles.wrapper, style]}>{children}</View>
     </SafeAreaView>
   );
 };

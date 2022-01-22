@@ -1,10 +1,30 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import NotFoundScreen from 'screens/NotFoundScreen';
+import { useAxios } from 'hooks/common';
+import { useIsFocused } from '@react-navigation/native';
 import { useTabNavigationOptions, BOTTOM_TAB_ROUTES } from './helpers';
 
 import PriceStackNavigator from './PriceStackNavigator';
+import { Text } from 'react-native';
+
+const ClientScreen = () => {
+  const api = useAxios();
+  const isFocused = useIsFocused();
+  const [clients, setClients] = useState([]);
+  console.log('render');
+  useEffect(() => {
+    const getClients = async () => {
+      const res = await api.get('/clients');
+      setClients(res);
+    };
+
+    if (isFocused) getClients();
+  }, [isFocused]);
+
+  return <Text>1</Text>;
+};
 
 const TabNavigator = createBottomTabNavigator();
 
@@ -38,7 +58,7 @@ const BottomTabNavigator = () => {
           title: t('menu.bottom.clients'),
         }}
         name={BOTTOM_TAB_ROUTES.CLIENTS}
-        component={NotFoundScreen}
+        component={ClientScreen}
       />
       <TabNavigator.Screen
         options={{

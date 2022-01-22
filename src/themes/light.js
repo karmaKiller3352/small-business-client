@@ -17,6 +17,7 @@ const light = {
     secondary: '#7e95ca',
     tertiary: '#fff',
     forth: '#000',
+    error: '#ff3b2e'
   },
   border: {
     primary: '#ededed',

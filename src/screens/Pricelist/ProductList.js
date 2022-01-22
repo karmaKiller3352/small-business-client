@@ -4,9 +4,7 @@ import { ScreenWrapper } from 'styles/global';
 import { useMomentLocale } from 'hooks/common';
 import { useTranslation } from 'react-i18next';
 import { PRICE_STACK_ROUTES, useRightButtons } from 'navigation/helpers';
-import { useSyncActions, useSyncEntity } from 'hooks/datastore';
 import { DATE_FORMATS } from 'constants/common';
-import { Pricelist } from 'models';
 import * as R from 'ramda';
 import { ICON_PROPS } from './helpers/constants';
 import AddNameLayout from './components/AddNameLayout';
@@ -42,12 +40,8 @@ const ProductList = ({ navigation, route }) => {
 
   const title = R.pathOr(initPlaceholder, ['params', 'title'], route);
 
-  const { entity, setEntity } = useSyncEntity(Pricelist, details.id, {
-    title,
-    ...details,
-  });
+  const { entity, setEntity } = () => ({ entity: null, setEntity: () => null })
 
-  const { syncAction, removeAction } = useSyncActions();
   const afterRemove = () => navigation.goBack();
 
   useRightButtons({
@@ -62,7 +56,7 @@ const ProductList = ({ navigation, route }) => {
       {
         iconProps: ICON_PROPS.DELETE,
         onPress: async () => {
-          await removeAction(entity.id, Pricelist, afterRemove);
+          return null
         },
       },
     ],
@@ -75,7 +69,7 @@ const ProductList = ({ navigation, route }) => {
         title,
       };
 
-      const data = await syncAction(newPricelist, Pricelist);
+      const data = () => null
       setEntity(data);
     },
     [entity],

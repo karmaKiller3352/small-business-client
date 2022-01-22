@@ -1,9 +1,7 @@
 import * as R from 'ramda';
 import { currencify } from 'utils/global';
-import { isFieldValueUniq } from 'hooks/datastore';
-import { Pricelist, Products } from 'models';
 import { PRICELIST_DETAILS } from './constants';
-import moment from 'moment';
+
 
 const mockProducts = [
   {
@@ -71,8 +69,7 @@ export const getPriceDetails = ({ t, details, currency }) => {
 };
 
 export const checkPricelistName = async (str, setError, t) => {
-  const isExist = await isFieldValueUniq('title', str, Pricelist);
-
+  const isExist = false
   if (isExist) {
     return setError(t('errors.pricelist_dublicate'));
   }
@@ -81,7 +78,7 @@ export const checkPricelistName = async (str, setError, t) => {
 };
 
 export const checkProductName = async (str, setError, t) => {
-  const isExist = await isFieldValueUniq('title', str, Products);
+  const isExist = () => null
 
   if (isExist) {
     return setError(t('errors.product_dublicate'));

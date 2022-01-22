@@ -8,7 +8,8 @@ const getStyles = (theme, props) => {
     paddingLeft: props.pl || 0,
     fontSize: props.size || 10,
     paddingRight: props.pr || 0,
-    lineHeight: 22,
+    textAlign: props.align,
+    width: props.width || 'auto',
   };
 
   container.color = theme.color[props.color] || theme.color.primary;
@@ -42,7 +43,10 @@ const Caption = ({
   title,
   medium,
   thin,
+  align = 'left',
   number,
+  width,
+  underline,
   ...props
 }) => {
   const { Styles } = useThemedStyles(getStyles, {
@@ -51,11 +55,14 @@ const Caption = ({
     pl,
     pr,
     size,
+    align,
     color,
     upper,
     lower,
     medium,
     capitalized,
+    underline,
+    width,
   });
 
   const styles = getStyleType({

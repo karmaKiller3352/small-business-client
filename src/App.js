@@ -5,17 +5,8 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ThemeProvider } from './providers/ThemeProvider';
 import Navigation from './navigation';
 import './locales';
-import { withAuthenticator } from 'aws-amplify-react-native';
-
-import Amplify from 'aws-amplify';
-import awsconfig from './aws-exports';
-
-Amplify.configure({
-  ...awsconfig,
-  Analytics: {
-    disabled: true,
-  },
-});
+import AuthProvider from './providers/AuthProvider';
+import FlashMessage from 'react-native-flash-message';
 
 const App = () => {
   useEffect(() => {
@@ -23,13 +14,16 @@ const App = () => {
   }, []);
 
   return (
-    <ThemeProvider>
-      <SafeAreaProvider>
-        <StatusBar barStyle="light-content" backgroundColor="#000" />
-        <Navigation />
-      </SafeAreaProvider>
-    </ThemeProvider>
+    <AuthProvider>
+      <ThemeProvider>
+        <SafeAreaProvider>
+          <StatusBar barStyle="light-content" backgroundColor="#000" />
+          <Navigation />
+        </SafeAreaProvider>
+      </ThemeProvider>
+      <FlashMessage position="bottom" style={{ alignItems: 'center' }} titleStyle={{ fontSize: 19, textAlign: 'center' }} />
+    </AuthProvider>
   );
 };
 
-export default withAuthenticator(App);
+export default App;

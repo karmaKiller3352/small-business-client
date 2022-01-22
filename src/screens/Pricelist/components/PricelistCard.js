@@ -6,9 +6,7 @@ import Caption from 'components/Caption';
 import Section from 'components/Section';
 import { PRICE_STACK_ROUTES } from 'navigation/helpers';
 import { useThemedStyles } from 'hooks/common';
-import { Products } from 'models';
 import { getPriceDetails } from '../helpers/utils';
-import { useSyncList } from 'hooks/datastore';
 
 const getStyles = (theme, props) => {
   return StyleSheet.create({
@@ -65,10 +63,7 @@ const getImage = uri =>
   uri ? { uri } : require('./images/pricelist-placeholder.png');
 
 const PricelistCard = ({ image, title, active, navigation, ...details }) => {
-  const products = useSyncList({
-    model: Products,
-    filter: c => c.pricelistID === details.id,
-  });
+  const products = [];
 
   const currency = 'ru'; // TO DO: add fetching current currency from account settings
   const { Styles } = useThemedStyles(getStyles, { active });

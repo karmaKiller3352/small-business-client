@@ -3,12 +3,9 @@ import { FlatList } from 'react-native-gesture-handler';
 import { useRightButtons, PRICE_STACK_ROUTES } from 'navigation/helpers';
 import { ScreenWrapper } from 'styles/global';
 import PricelistCard from './components/PricelistCard';
-import { useSyncList } from 'hooks/datastore';
-import { Pricelist } from 'models';
 import { ICON_PROPS } from './helpers/constants';
 
 const List = ({ navigation }) => {
-  const priceLists = useSyncList({ model: Pricelist });
 
   useRightButtons({
     buttons: [
@@ -24,12 +21,10 @@ const List = ({ navigation }) => {
     <ScreenWrapper>
       <FlatList
         style={{ paddingHorizontal: 10 }}
-        data={priceLists}
+        data={[]}
         keyExtractor={p => p.id}
         renderItem={props => {
-          return (
-            <PricelistCard active {...props.item} navigation={navigation} />
-          );
+          return null
         }}
       />
     </ScreenWrapper>

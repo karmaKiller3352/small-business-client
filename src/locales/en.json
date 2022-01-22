@@ -3,11 +3,17 @@
     "yes": "yes",
     "no": "no",
     "ok": "OK",
+    "and": "and",
     "cancel": "Cancel",
     "submit": "Submit",
     "save": "Save",
     "enter_text": "Enter some text",
-    "enter_name": "Enter pricelist name"
+    "enter_name": "Enter pricelist name",
+    "email": "Email",
+    "password": "Password",
+    "privacy": "By clicking on «Submit» you agree to our",
+    "politics": "Privacy Policy",
+    "terms": "Terms & Conditions"
   },
   "buttons": {
     "set_dark": "Set Dark",
@@ -30,6 +36,8 @@
     "removeTitle": "Are you sure you want to delete?"
   },
   "errors": {
+    "server_error": "Internal error, try later",
+    "wrong_creds": "Wrong email or password",
     "required": "Field is required",
     "textarea_too_long": "Must be at most 200 characters",
     "too_short": "Field must be at least {{count}} characters long",
@@ -71,6 +79,23 @@
     }
   },
   "screen": {
+    "auth": {
+      "signin": "Sign In",
+      "signup": "Sign Up",
+      "signout": "Sign Out",
+      "already_exists": "Email is already registered",
+      "password_confirm": "Password confirmation",
+      "no_confirm_password": "Confirm password is required",
+      "restore_password": "Restore password",
+      "no_password": "No password provided.",
+      "no_email": "No email provided.",
+      "invalid_email": "Email should be valid",
+      "short_password": "Password is too short - should be 8 chars minimum.",
+      "contains_letter": "Password should contain latin letters.",
+      "contains_digits": "Password should contain digits.",
+      "contains_upper": "Password should at least one uppercase letter.",
+      "match_password": "Passwords must match"
+    },
     "settings": {
       "language_label": "Choose language",
       "theme_label": "Choose theme",
